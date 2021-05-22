@@ -92,7 +92,7 @@ export default {
     },
     login() {
       var reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-      if (this.username !== 'pandy') {
+      if (this.username !== "pandy") {
         if (!reg.test(this.username)) {
           this.$toast({ type: "error", message: "邮箱格式不正确" });
           return false;
@@ -102,37 +102,36 @@ export default {
           return false;
         }
       } else {
-        this.username = 'pandy'
-        this.password = '000000'
+        this.username = "pandy";
+        this.password = "000000";
       }
       const that = this;
       // eslint-disable-next-line no-undef
-      var captcha = new TencentCaptcha(this.config.TENCENT_CAPTCHA, function(
-        res
-      ) {
-        if (res.ret === 0) {
-          //发送登录请求
-          let param = new URLSearchParams();
-          // eslint-disable-next-line no-debugger
-          debugger
-          let forms = {username: this.username, password: this.password}
-          param.append("username", that.username);
-          param.append("password", that.password);
-          that.axios.post("/api/login", forms).then(({ data }) => {
-            if (data.status) {
-              that.username = "";
-              that.password = "";
-              that.$store.commit("login", data.data.user);
-              that.$store.commit("closeModel");
-              that.$toast({ type: "success", message: data.message });
-            } else {
-              that.$toast({ type: "error", message: data.message });
-            }
-          });
-        }
-      });
-      // 显示验证码
-      captcha.show();
+      // var captcha = new TencentCaptcha(this.config.TENCENT_CAPTCHA, function(
+      //   res
+      // ) {
+      // eslint-disable-next-line no-constant-condition
+      if (0 === 0) {
+        //发送登录请求
+        let param = new URLSearchParams();
+        let forms = { username: this.username, password: this.password };
+        param.append("username", that.username);
+        param.append("password", that.password);
+        that.axios.post("/api/login", forms).then(({ data }) => {
+          if (data.status) {
+            that.username = "";
+            that.password = "";
+            that.$store.commit("login", data.data.user);
+            that.$store.commit("closeModel");
+            that.$toast({ type: "success", message: data.message });
+          } else {
+            that.$toast({ type: "error", message: data.message });
+          }
+        });
+      }
+      // });
+      // // 显示验证码
+      // captcha.show();
     },
     qqLogin() {
       //保留当前路径

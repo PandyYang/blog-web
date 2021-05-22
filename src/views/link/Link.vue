@@ -33,7 +33,7 @@
         <v-icon color="blue">mdi-dots-horizontal-circle</v-icon> 添加友链
       </div>
       <blockquote>
-        <div>名称：风丶宇的个人博客</div>
+        <div>名称：dida的个人博客</div>
         <div>简介：成事在人 谋事在天</div>
         <div>头像：https://www.static.talkxj.com/avatar/blogger.jpg</div>
       </blockquote>

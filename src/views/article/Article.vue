@@ -77,7 +77,7 @@
           <div class="aritcle-copyright">
             <div>
               <span>文章作者：</span>
-              <a href="http://www.talkxj.com" target="_blank"> 风丶宇</a>
+              <a href="http://www.talkxj.com" target="_blank"> dida</a>
             </div>
             <div>
               <span>文章链接：</span>
@@ -123,17 +123,17 @@
               <div class="animated fadeInDown reward-main">
                 <ul class="reward-all">
                   <li class="reward-item">
-                    <img
-                      class="reward-img"
-                      :src="require('../../assets/img/wechat.png')"
-                    />
+<!--                    <img-->
+<!--                      class="reward-img"-->
+<!--                      :src="require('../../assets/img/wechat.png')"-->
+<!--                    />-->
                     <div class="reward-desc">微信</div>
                   </li>
                   <li class="reward-item">
-                    <img
-                      class="reward-img"
-                      :src="require('../../assets/img/alipay.png')"
-                    />
+<!--                    <img-->
+<!--                      class="reward-img"-->
+<!--                      :src="require('../../assets/img/alipay.png')"-->
+<!--                    />-->
                     <div class="reward-desc">支付宝</div>
                   </li>
                 </ul>
@@ -179,40 +179,40 @@
             </div>
           </div>
           <!-- 推荐文章 -->
-          <div
-            class="recommend-container"
-            v-if="article.articleRecommendList.length"
-          >
-            <div class="recommend-title">
-              <v-icon size="20" color="#4c4948">mdi-thumb-up</v-icon> 相关推荐
-            </div>
-            <div class="recommend-list">
-              <div
-                class="recommend-item"
-                v-for="item of article.articleRecommendList"
-                :key="item.id"
-              >
-                <router-link :to="'/articles/' + item.id">
-                  <img class="recommend-cover" :src="item.articleCover" />
-                  <div class="recommend-info">
-                    <div class="recommend-date">
-                      <i class="iconfont iconrili" />
-                      {{ item.createTime | date }}
-                    </div>
-                    <div>{{ item.articleTitle }}</div>
-                  </div>
-                </router-link>
-              </div>
-            </div>
-          </div>
+<!--          <div-->
+<!--            class="recommend-container"-->
+<!--            v-if="article.articleRecommendList.length"-->
+<!--          >-->
+<!--            <div class="recommend-title">-->
+<!--              <v-icon size="20" color="#4c4948">mdi-thumb-up</v-icon> 相关推荐-->
+<!--            </div>-->
+<!--            <div class="recommend-list">-->
+<!--              <div-->
+<!--                class="recommend-item"-->
+<!--                v-for="item of article.articleRecommendList"-->
+<!--                :key="item.id"-->
+<!--              >-->
+<!--                <router-link :to="'/articles/' + item.id">-->
+<!--                  <img class="recommend-cover" :src="item.articleCover" />-->
+<!--                  <div class="recommend-info">-->
+<!--                    <div class="recommend-date">-->
+<!--                      <i class="iconfont iconrili" />-->
+<!--                      {{ item.createTime | date }}-->
+<!--                    </div>-->
+<!--                    <div>{{ item.articleTitle }}</div>-->
+<!--                  </div>-->
+<!--                </router-link>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
           <!-- 分割线 -->
           <hr />
           <!-- 评论 -->
-          <comment
-            :commentList="commentList"
-            :count="count"
-            @reloadComment="listComment"
-          />
+<!--          <comment-->
+<!--            :commentList="commentList"-->
+<!--            :count="count"-->
+<!--            @reloadComment="listComment"-->
+<!--          />-->
         </v-card>
       </v-col>
       <!-- 侧边功能 -->
@@ -260,12 +260,12 @@
 
 <script>
 import Clipboard from "clipboard";
-import Comment from "../../components/Comment";
+// import Comment from "../../components/Comment";
 import tocbot from "tocbot";
 export default {
-  components: {
-    Comment
-  },
+  // components: {
+  //   Comment
+  // },
   created() {
     this.getArticle();
     this.listComment();
@@ -306,9 +306,9 @@ export default {
       const that = this;
       //查询文章
       this.axios.get("/api" + this.$route.path).then(({ data }) => {
-        document.title = data.data.articleTitle;
+        document.title = data.data.data.articleTitle;
         //将markdown转换为Html
-        this.markdownToHtml(data.data);
+        this.markdownToHtml(data.data.data);
         this.$nextTick(() => {
           // 统计文章字数
           this.wordNum = this.deleteHTMLTag(this.article.articleContent).length;
@@ -390,6 +390,7 @@ export default {
       });
     },
     markdownToHtml(article) {
+      console.log(article)
       const MarkdownIt = require("markdown-it");
       const hljs = require("highlight.js");
       const md = new MarkdownIt({

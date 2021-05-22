@@ -5,7 +5,7 @@
       <div class="banner-container">
         <!-- 联系方式 -->
         <h1 class="blog-title animated zoomIn">
-          风丶宇的个人博客
+          dida的个人博客
         </h1>
         <!-- 一言 -->
         <div class="blog-intro">
@@ -95,7 +95,7 @@
             </div>
             <!-- 文章内容 -->
             <div class="article-content">
-              {{ item.articleContent }}
+              {{ item.content }}
             </div>
           </div>
         </v-card>
@@ -280,16 +280,16 @@ export default {
           }
         })
         .then(({ data }) => {
-          if (data.data.length) {
+          if (data.data.data.length) {
             // 去除markdown标签
-            data.data.forEach(item => {
+            data.data.data.forEach(item => {
               item.articleContent = md
                 .render(item.articleContent)
                 .replace(/<\/?[^>]*>/g, "")
                 .replace(/[|]*\n/, "")
                 .replace(/&npsp;/gi, "");
             });
-            this.articleList.push(...data.data);
+            this.articleList.push(...data.data.data);
             this.current++;
             $state.loaded();
           } else {
