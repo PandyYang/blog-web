@@ -11,6 +11,7 @@ import Message from "../views/message/Messsage.vue";
 import ArticleList from "../components/ArticleList.vue";
 import User from "../views/user/User.vue";
 import OauthLogin from "../components/OauthLogin.vue";
+import BlogAdd from "@/views/article/BlogAdd";
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,10 @@ const routes = [
   {
     path: "/articles/:articleId",
     component: Article
+  },
+  {
+    path: "/addArticles",
+    component: BlogAdd
   },
   {
     path: "/archives",

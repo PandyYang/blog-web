@@ -5,7 +5,7 @@
       <div class="banner-container">
         <!-- 联系方式 -->
         <h1 class="blog-title animated zoomIn">
-          dida的个人博客
+          云儿和毛毛的故事本
         </h1>
         <!-- 一言 -->
         <div class="blog-intro">
@@ -331,7 +331,7 @@ export default {
   left: 0;
   right: 0;
   height: 100vh;
-  background: url("https://www.static.talkxj.com/wallhaven-g89p2.png") center
+  background: url("https://cdn.nlark.com/yuque/0/2021/jpeg/12601836/1621737754610-c8d4a2d5-179b-4c9a-b62d-30bd4e88732c.jpeg") center
     center / cover no-repeat;
   background-color: #49b1f5;
   background-attachment: fixed;

@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .about-banner {
-  background: url(https://www.static.talkxj.com/8xy.jpg) center center / cover
+  background: url(https://cdn.nlark.com/yuque/0/2021/jpeg/12601836/1621739961406-99188132-7e31-4d51-a935-49e03ddf2c72.jpeg) center center / cover
     no-repeat;
   background-color: #49b1f5;
 }

@@ -94,7 +94,7 @@ export default {
   left: 0;
   right: 0;
   height: 100vh;
-  background: url(https://www.static.talkxj.com/d5ojdj.jpg) center center /
+  background: url(https://cdn.nlark.com/yuque/0/2021/jpeg/12601836/1621740195097-517135dc-2b77-4d5f-aa57-50553656f664.jpeg) center center /
     cover no-repeat;
   background-color: #49b1f5;
   animation: header-effect 1s;

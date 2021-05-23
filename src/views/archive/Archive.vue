@@ -78,7 +78,7 @@ export default {
 
 <style scoped>
 .archive-banner {
-  background: url(https://www.static.talkxj.com/wallroom-1920x1080-bg-338d7bc.jpg)
+  background: url(https://cdn.nlark.com/yuque/0/2021/jpeg/12601836/1621740217837-3f60f4c3-9e33-43bc-87a1-ec0cf0d6095f.jpeg)
     center center / cover no-repeat;
   background-color: #49b1f5;
 }

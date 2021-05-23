@@ -22,9 +22,14 @@
         </router-link>
       </div>
       <div class="float-right nav-title">
-        <div class="menus-btn">
-          <a @click="openSearch"><i class="iconfont iconsousuo" /> 搜索</a>
+        <div class="menus-item">
+          <router-link to="/addArticles">
+            <i class="iconfont iconguidang" /> 写博客
+          </router-link>
         </div>
+<!--        <div class="menus-btn">-->
+<!--          <a @click="openSearch"><i class="iconfont iconsousuo" /> 搜索</a>-->
+<!--        </div>-->
         <div class="menus-item">
           <router-link to="/">
             <i class="iconfont iconzhuye" /> 首页
@@ -45,21 +50,21 @@
             <i class="iconfont iconbiaoqian" /> 标签
           </router-link>
         </div>
-        <div class="menus-item">
-          <router-link to="/links">
-            <i class="iconfont iconlianjie" /> 友链
-          </router-link>
-        </div>
-        <div class="menus-item">
-          <router-link to="/about">
-            <i class="iconfont iconzhifeiji" /> 关于
-          </router-link>
-        </div>
-        <div class="menus-item">
-          <router-link to="/message">
-            <i class="iconfont iconpinglunzu" /> 留言
-          </router-link>
-        </div>
+<!--        <div class="menus-item">-->
+<!--          <router-link to="/links">-->
+<!--            <i class="iconfont iconlianjie" /> 友链-->
+<!--          </router-link>-->
+<!--        </div>-->
+<!--        <div class="menus-item">-->
+<!--          <router-link to="/about">-->
+<!--            <i class="iconfont iconzhifeiji" /> 关于-->
+<!--          </router-link>-->
+<!--        </div>-->
+<!--        <div class="menus-item">-->
+<!--          <router-link to="/message">-->
+<!--            <i class="iconfont iconpinglunzu" /> 留言-->
+<!--          </router-link>-->
+<!--        </div>-->
         <div class="user-btn">
           <a v-if="!this.$store.state.avatar" @click="openLogin">
             <i class="iconfont icondenglu" /> 登录

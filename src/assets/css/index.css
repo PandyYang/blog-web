@@ -6,7 +6,7 @@ a, button, img {
   cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),default;
 }
 ul{
-  padding:0 !important; 
+  padding:0 !important;
 }
 * {
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Lato,Roboto,'PingFang SC','Microsoft YaHei',sans-serif !important;
@@ -227,7 +227,7 @@ p {
     border-radius: 4px;
     height: 100vh;
     width: 100vw;
-    
+
   }
   .login-wrapper {
     padding: 18vh 0.5em 0 0.5rem;
@@ -312,7 +312,7 @@ p {
   resize: none;
   width: 100%;
   border-radius: 4px;
-  background: url(https://www.static.talkxj.com/commentBack.webp) 100% 100% no-repeat;
+  background: url(https://cdn.nlark.com/yuque/0/2021/jpeg/12601836/1621739878786-bfa5f17c-cb17-4388-9fa9-d7370f812b02.jpeg) 100% 100% no-repeat;
 }
 
 .upload-btn{
@@ -470,7 +470,7 @@ pre.hljs code {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; 
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 .pan{
@@ -479,5 +479,5 @@ pre.hljs code {
   padding: 13px;
 }
 #nprogress .bar {
-  background:#49b1f5 !important; 
+  background:#49b1f5 !important;
 }

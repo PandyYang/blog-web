@@ -109,7 +109,7 @@ export default {
 
 <style scoped>
 .user-banner {
-  background: url(https://www.static.talkxj.com/article/setting.jpeg) center
+  background: url(https://cdn.nlark.com/yuque/0/2021/jpeg/12601836/1621740191313-40a0ccd1-7f58-4b99-9bf4-83dc72ab90f4.jpeg) center
     center / cover no-repeat;
   background-color: #49b1f5;
 }
